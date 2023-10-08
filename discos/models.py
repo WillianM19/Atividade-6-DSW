@@ -1,6 +1,6 @@
 from django.db import models
 
-class Artist(models.Model):
+class artist(models.Model):
     artist_name = models.CharField(max_length=50)
     
     def __str__(self):
@@ -20,7 +20,7 @@ class disc(models.Model):
     country = models.CharField(max_length=20)
     genre = models.CharField(max_length=20)
     amount = models.IntegerField()
-    artist = models.ManyToManyField(Artist)
+    artist = models.ManyToManyField(artist)
     
     def __str__(self):
         return self.name

@@ -3,5 +3,5 @@ from .models import *
 
 # Register your models here.
 admin.site.register(disc)
-admin.site.register(Artist)
+admin.site.register(artist)
 admin.site.register(phonographicLabel)
