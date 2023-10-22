@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="{% static 'css/styles.css'%}">
 </head>
 <body>
-    <h1>Discos registrados:</h1>
-    <div class="discsList">
-        {% for disc in discs%}
-            {% include 'itemCard.html' with disc=disc %}
-        {%endfor%}
-    </div>
+    <main>
+        <h1>Discos registrados:</h1>
+        <div class="discsList">
+            {% for disc in discs%}
+                {% include 'itemCard.html' with disc=disc %}
+            {%endfor%}
+        </div>
+    </main>
 </body>
 </html>
