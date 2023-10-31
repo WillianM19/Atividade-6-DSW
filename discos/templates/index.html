@@ -5,17 +5,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro de Discos</title>
     <link rel="stylesheet" href="{% static 'css/styles.css'%}">
 </head>
+
 <body>
     <main>
-        <h1>Discos registrados:</h1>
-        <div class="discsList">
+        <h1>Registro de Discos:</h1>
+        <a href="{% url 'createDisc' %}">
+            <button class="btnNewDisc">Registrar Disco</button>
+        </a>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Etiqueta fonográfica</th>
+                <th>Ano</th>
+                <th>País</th>
+                <th>Genero</th>
+                <th>Quantidade</th>
+                <th>Opções</th>
+            </tr>
             {% for disc in discs%}
-                {% include 'itemCard.html' with disc=disc %}
+                <tr>
+                    <td> {{disc.name}}</td>
+                    <td> {{disc.description}}</td>
+                    <td> {{disc.phonographicLabel}}</td>
+                    <td> {{disc.year}}</td>
+                    <td> {{disc.country}}</td>
+                    <td> {{disc.genre}}</td>
+                    <td> {{disc.amount}}</td>
+                    <td>
+                        <button style="background-color: blue" ><a href="showDisc/{{ disc.id }}">Visualizar</a></button>
+                        <button style="background-color: green" ><a href="editDisc/{{ disc.id }}">Editar</a></button>
+                        <button style="background-color: red"><a href="deleteDisc/{{ disc.id }}">Apagar</a></button>
+                    </td>
+                </tr>
             {%endfor%}
-        </div>
+        </table>
     </main>
 </body>
 </html>

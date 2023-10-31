@@ -8,7 +8,7 @@ main {
     margin: auto;
 
     background-color: rgb(238, 238, 238);
-    height: 800px;
+    min-height: 800px;
     border-radius: 16px;
     padding: 16px 32px;
 }
@@ -28,6 +28,10 @@ main {
     }
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 .itemCard {
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
@@ -88,4 +92,67 @@ main {
     flex-wrap: wrap;
     margin-top: 32px;
     width: 100%;
+}
+
+.btnNewDisc {
+    padding: 13px;
+    background-color: #00adb3;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table tr {
+    background-color: #00adb3;
+    color: #ffffff;
+    text-align: left;
+}
+
+table :where(th, td) {
+    border: 1px solid #333;
+    padding: 12px 15px;
+}
+
+table button {
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700px;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 0;
+}
+
+form :where(select, input, button) {
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    outline: none;
+    padding: 0 8px;
+}
+
+form button {
+    background-color: #009879;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
 }

@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Disco</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+</head>
+
+<body>
+    <main>
+        <h1>Exibindo disco: {{disc.name}}</h1>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Etiqueta fonográfica</th>
+                <th>Ano</th>
+                <th>País</th>
+                <th>Genero</th>
+                <th>Quantidade</th>
+            </tr>
+            <tr>
+                <td> {{disc.name}}</td>
+                <td> {{disc.description}}</td>
+                <td> {{disc.phonographicLabel}}</td>
+                <td> {{disc.year}}</td>
+                <td> {{disc.country}}</td>
+                <td> {{disc.genre}}</td>
+                <td> {{disc.amount}}</td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>

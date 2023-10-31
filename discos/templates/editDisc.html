@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Disco</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+</head>
+<body>
+    <main>
+        <h1>Editando Disco:</h1>
+        <form action="/editDisc/{{ disc.id }}" method="post">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit">Editar</button>
+        </form>
+    </main>
+</body>
+</html>
